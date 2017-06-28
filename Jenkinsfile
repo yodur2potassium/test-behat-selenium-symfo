@@ -1,8 +1,11 @@
 #! groovy
 
 node('master') {
+    stage('Récupération de composer'){
+	sh 'curl https://getcomposer.org/composer.phar'
+    }
     stage('Installation des dépendances'){
-	sh 'composer install'
+	sh 'php composer.phar install'
     }
     stage('Test unitaires'){
 	sh './vendor/bin/phpunit'
