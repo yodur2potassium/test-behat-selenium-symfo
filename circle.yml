@@ -1,0 +1,14 @@
+machine:
+  timezone:
+    Europe/Paris
+  php:
+    version: 7.0.4
+
+test:
+  override:
+    - vendor/bin/phpunit
+    - vendor/bin/behat
+
+general:
+  artifacts:
+    - "var/fails"
