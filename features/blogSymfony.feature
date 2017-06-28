@@ -9,3 +9,5 @@ Feature: Blog page
   Scenario: I can change the language
     When I follow "locales"
     Then I should see "Català"
+
+  
