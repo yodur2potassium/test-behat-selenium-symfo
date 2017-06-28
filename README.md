@@ -4,7 +4,8 @@ Symfony Demo Application
 The "Symfony Demo Application" is a reference application created to show how
 to develop Symfony applications following the recommended best practices.
 
-[![Build Status](https://travis-ci.org/symfony/symfony-demo.svg?branch=master)](https://travis-ci.org/symfony/symfony-demo)
+[![CircleCI](https://circleci.com/gh/BFoucher/symfony-demo.svg?style=shield)](https://circleci.com/gh/BFoucher/symfony-demo)
+
 
 Requirements
 ------------
@@ -80,4 +81,16 @@ $ git clone https://github.com/symfony/symfony-demo symfony_demo
 $ cd symfony_demo/
 $ git checkout tags/v0.8.4 -b v0.8.4
 $ composer install
+```
+
+Tests
+------------
+Unit Test
+```bash
+$ php vendor/bin/phpunit
+```
+
+Behat Test
+```bash
+$ php vendor/bin/behat
 ```
