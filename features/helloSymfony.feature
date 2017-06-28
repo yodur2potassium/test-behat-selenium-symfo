@@ -1,3 +1,4 @@
+@javascript
 Feature: Welcome to Symfony
   I need to be able to see welcome to Symfony message
 

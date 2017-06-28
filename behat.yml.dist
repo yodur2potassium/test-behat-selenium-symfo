@@ -1,11 +1,28 @@
 default:
+    suites:
+        default:
+            contexts:
+                - Knp\FriendlyContexts\Context\MinkContext
+                - Knp\FriendlyContexts\Context\TableContext
+                - Knp\FriendlyContexts\Context\EntityContext
+                - Features\Context\FeatureContext
     extensions:
+        Knp\FriendlyContexts\Extension: ~
         Behat\Symfony2Extension: ~
         Behat\MinkExtension:
-            base_url: YOUR_URL
+            base_url: http://127.0.0.1:8000/app.php
             sessions:
                 default:
                     symfony2: ~
                 javascript:
                     selenium2: ~
-
+            selenium2:
+                wd_host: 127.0.0.1:4444/wd/hub
+                capabilities:
+                    chrome:
+                        switches:
+                            #- "--headless"
+                            - "--disable-gpu"
+                            - "--window-size=1600,1400"
+            browser_name: chrome
+            javascript_session: selenium2

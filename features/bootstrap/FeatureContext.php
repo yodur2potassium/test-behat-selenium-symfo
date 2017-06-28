@@ -1,23 +1,23 @@
 <?php
 
+namespace Features\Context;
+
 use Behat\Behat\Context\Context;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
-use \Behat\MinkExtension\Context\MinkContext;
+use Behat\MinkExtension\Context\RawMinkContext;
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends MinkContext implements Context
+class FeatureContext extends RawMinkContext  implements Context
 {
+
     /**
-     * Initializes context.
+     * @Given /^I wait (\d+) seconds?$/
      *
-     * Every scenario gets its own context instance.
-     * You can also pass arbitrary arguments to the
-     * context constructor through behat.yml.
+     * @param int $nbr
      */
-    public function __construct()
+    public function iWaitSeconds($nbr)
     {
+        $this->getSession()->wait($nbr * 1000);
     }
 }

@@ -6,7 +6,8 @@
     "autoload": {
         "psr-4": {
             "AppBundle\\": "src/AppBundle/",
-            "CodeExplorerBundle\\": "src/CodeExplorerBundle/"
+            "CodeExplorerBundle\\": "src/CodeExplorerBundle/",
+            "Features\\Context\\": "features/bootstrap/"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
@@ -43,6 +44,7 @@
         "behat/symfony2-extension": "^2.1",
         "dama/doctrine-test-bundle": "^1.0",
         "friendsofphp/php-cs-fixer": "^2.0",
+        "knplabs/friendly-contexts": "dev-master",
         "phpunit/phpunit": "^4.8 || ^5.0",
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
