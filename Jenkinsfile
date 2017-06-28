@@ -2,7 +2,7 @@
 
 node('master') {
     stage('Récupération de composer'){
-	sh 'curl https://getcomposer.org/composer.phar'
+	sh 'curl -s https://getcomposer.org/composer.phar -o composer.phar'
     }
     stage('Installation des dépendances'){
 	sh 'php composer.phar install'
