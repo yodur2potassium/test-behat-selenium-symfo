@@ -1,0 +1,11 @@
+default:
+    extensions:
+        Behat\Symfony2Extension: ~
+        Behat\MinkExtension:
+            base_url: YOUR_URL
+            sessions:
+                default:
+                    symfony2: ~
+                javascript:
+                    selenium2: ~
+
