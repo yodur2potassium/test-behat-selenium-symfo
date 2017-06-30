@@ -20,4 +20,13 @@ class FeatureContext extends MinkContext implements Context
     public function __construct()
     {
     }
+
+    /**
+     * @Then I should receive a :arg1 response
+     */
+    public function iShouldReceiveAResponse($arg1)
+    {
+
+    }
+
 }

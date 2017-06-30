@@ -2,7 +2,7 @@ default:
     extensions:
         Behat\Symfony2Extension: ~
         Behat\MinkExtension:
-            base_url: YOUR_URL
+            base_url: http://127.0.0.1:8000/
             sessions:
                 default:
                     symfony2: ~
